@@ -130,9 +130,9 @@ def gameloop():
                         velocity_y = velocity_y+init_velocity
                         velocity_x = 0
                     
-                    # Cheatcode(if you want 100 points directly )
-                    # if event.key==pygame.K_p:
-                    #     score+=100 
+                    # Cheatcode(100 points directly )
+                    if event.key==pygame.K_p:
+                        score+=100 
 
             snake_x = snake_x + velocity_x
             snake_y = snake_y + velocity_y
