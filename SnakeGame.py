@@ -3,7 +3,7 @@ import random
 
 # music files
 pygame.mixer.init()
-pygame.mixer.music.load('game.mp3')
+pygame.mixer.music.load('Audio/game.mp3')
 pygame.mixer.music.play() 
 
 
@@ -27,17 +27,17 @@ screen_height = 600
 gameWindow = pygame.display.set_mode((screen_width, screen_height))
 
 # background images
-w_image=pygame.image.load("w_img.jpg")
+w_image=pygame.image.load("Images/w_img.jpg")
 w_image=pygame.transform.scale(w_image,(screen_width,screen_height)).convert_alpha()
 
-b_image=pygame.image.load("back_g.jpg")
+b_image=pygame.image.load("Images/back_g.jpg")
 b_image=pygame.transform.scale(b_image,(screen_width,screen_height)).convert_alpha()
 
-g_oimage=pygame.image.load("g_o.jpg")
+g_oimage=pygame.image.load("Images/g_o.jpg")
 g_oimage=pygame.transform.scale(g_oimage,(screen_width,screen_height)).convert_alpha()
 
 # Game Name Title
-pygame.display.set_caption(" SNAKE GAME ")
+pygame.display.set_caption(" MY SNAKE GAME ")
 pygame.display.update()
 clock = pygame.time.Clock()
 font = pygame.font.SysFont(None, 55)
@@ -169,12 +169,12 @@ def gameloop():
             # Game-Over music
             if head in snake_list[:-1]:
                 game_over = True
-                pygame.mixer.music.load('end.mp3') 
+                pygame.mixer.music.load('Audio/end.mp3') 
                 pygame.mixer.music.play() 
 
             if snake_x<0 or snake_x>screen_width or snake_y<0 or snake_y>screen_height:
                 game_over = True
-                pygame.mixer.music.load('end.mp3') 
+                pygame.mixer.music.load('Audio/end.mp3') 
                 pygame.mixer.music.play() 
 
             plot_snake(gameWindow,green, snake_list, snake_size)
