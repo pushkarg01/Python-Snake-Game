@@ -114,23 +114,19 @@ def gameloop():
                     exit_game = True
 
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_RIGHT:
-                        #pygame.K_RIGHT=pygame.K_f
+                    if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
                         velocity_x = velocity_x + init_velocity
                         velocity_y = 0
 
-                    if event.key == pygame.K_LEFT:
-                       # pygame.K_LEFT=pygame.K_a
+                    if event.key == pygame.K_LEFT or event.key == pygame.K_a:
                         velocity_x = velocity_x-init_velocity
                         velocity_y = 0
 
-                    if event.key == pygame.K_UP:    
-                        #pygame.K_UP=pygame.K_e
+                    if event.key == pygame.K_UP or event.key == pygame.K_w:    
                         velocity_y = velocity_y-init_velocity
                         velocity_x = 0
 
-                    if event.key == pygame.K_DOWN:
-                        #pygame.K_DOWN=pygame.K_x
+                    if event.key == pygame.K_DOWN  or event.key == pygame.K_s:
                         velocity_y = velocity_y+init_velocity
                         velocity_x = 0
                     
